@@ -15,6 +15,7 @@
     "browser-sync": "^3.0.3",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-sass": "^6.0.0"
+    "gulp-sass": "^6.0.0",
+    "mkdirp": "^3.0.1"
   }
 }
