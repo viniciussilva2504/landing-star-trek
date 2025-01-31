@@ -1,21 +1,27 @@
-$background-color: rgb(247, 247, 247);
-$color-button: rgb(237, 217, 36);
+    $background-color: rgb(247, 247, 247);
+    $color-button: rgb(237, 217, 36);
 
-section.header {
+    body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    }
+
+    section.header {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(/src/img/5932509.jpg);  
-    background-size: cover;   
-    background-position: center; 
-    background-repeat: no-repeat; 
-    width: 100%; 
-    height: 100vh; 
+    background-image: url(/src/img/5932509.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
-}
+    }
 
-.button__header {
+    .button__header {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     background-color: $color-button;
@@ -23,164 +29,372 @@ section.header {
     width: 150px;
     height: 40px;
     margin-top: 10px;
-    margin-left: auto;
-    margin-right: 30px;
-    padding-left: 1px;
+    margin-left: auto; /* Move o botão para a direita */
     border-radius: 10px;
     cursor: pointer;
-}
+    margin: 10px;
+    }
 
-.button__header:hover {
-    background-color:#333;
+    .button__header:hover {
+    background-color: #333;
     color: #fff;
-    cursor: pointer;
-}
+    }
 
-.list__header {
+    .list__header {
+    display: flex;
+    justify-content: center; /* Centraliza os itens na linha */
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     list-style-type: none;
     padding-left: 0;
-    display: flex;
-    gap: 30px;
-    margin-left: 20px;
-    margin-top: -25px;
-    font-weight: bold;
-    cursor: pointer;
-}
+    gap: 20px; /* Adiciona espaço entre os itens */
+    margin: 0;
+    width: 100%; /* Garante que a lista ocupe a largura total */
+    margin-top: 20px;
+    }
 
-.list__header a {
-    color: white; /* Cor branca */
-    text-decoration: none; /* Remove a linha embaixo */
-}
+    .list__header li {
+    margin: 0;
+    }
 
-.list__header a:hover {
-    color: $color-button; /* Cor ao passar o mouse */
-}
+    .list__header a {
+    color: white;
+    text-decoration: none;
+    }
 
-/* Ajustes para a seção "Sobre a série" */
-section.sobre-a-serie {
+    .list__header a:hover {
+    color: $color-button;
+    }
+
+    /* Ajustes para a seção "Sobre a série" */
+    section.sobre-a-serie {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(/src/img/star-trek-header.jpg);  /* Imagem de fundo */
-    background-size: cover;   
-    background-position: center; 
-    background-repeat: no-repeat; 
-    width: 100%; 
-    height: 100vh; 
+    background-image: url(/src/img/star-trek-header.jpg); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px;
-    position: relative;  /* Necessário para posicionar o texto dentro da seção */
-}
+    position: relative; /* Necessário para posicionar o texto dentro da seção */
+    }
 
-/* Caixa de texto sobre a imagem */
-.texto-caixa {
-    position: absolute;  /* Faz a caixa de texto flutuar sobre a imagem */
-    top: 50%;  /* Centraliza verticalmente na metade da tela */
-    left: 5%;  /* Alinha à esquerda */
-    transform: translateY(-50%);  /* Ajusta a posição vertical para que a caixa fique centralizada */
-    background-color: rgba(255, 255, 255, 0.377);  /* Fundo branco com opacidade */
+    .texto-caixa {
+    position: absolute; /* Faz a caixa de texto flutuar sobre a imagem */
+    top: 50%; /* Centraliza verticalmente na metade da tela */
+    left: 5%; /* Alinha à esquerda */
+    transform: translateY(-50%); /* Ajusta a posição vertical para que a caixa fique centralizada */
+    background-color: rgba(255, 255, 255, 0.377); /* Fundo branco com opacidade */
     padding: 20px;
     padding-bottom: 10px;
     border-radius: 10px;
-    max-width: 500px;  /* Limita a largura da caixa de texto */
-    color: #333;  /* Cor do texto */
-    font-size: 1.5rem;  /* Tamanho do texto */
+    max-width: 500px; /* Limita a largura da caixa de texto */
+    color: #333; /* Cor do texto */
+    font-size: 1.5rem; /* Tamanho do texto */
     font-weight: bold;
-}
-
-section.sobre-elenco {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(/src/img/elenco.png);  /* Imagem de fundo */
-    background-size: cover;   
-    background-position: center; 
-    background-repeat: no-repeat; 
-    width: 100%; 
-    height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     padding: 20px;
-    position: relative;  /* Necessário para posicionar o texto dentro da seção */
-}
-
-.texto-caixa-elenco {
-    position: absolute;  /* Faz a caixa de texto flutuar sobre a imagem */
-    top: 70%;  /* Centraliza verticalmente na metade da tela */
-    left: 10%;  /* Alinha à esquerda */
-    transform: translateY(-50%);  /* Ajusta a posição vertical para que a caixa fique centralizada */
-    background-color: rgba(255, 255, 255, 0.523);  /* Fundo branco com opacidade */
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    max-width: 1000px;  /* Limita a largura da caixa de texto */
-    max-height: 300px;
-    color: #333;  /* Cor do texto */
-    font-size: 1rem;  /* Tamanho do texto */
-    font-weight: bold;
-}
+    margin: 20px 0;
+    }
 
-/* Estilizando os títulos das seções */
-h2.texto-sobre {
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.texto-sobre {
-    font-size: 1.1rem;
-    color: #fff;
-}
-
-section.novos-projetos {
+    section.sobre-elenco {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(/src/img/sobre-a-serie.jpg);  /* Imagem de fundo */
-    background-size: cover;   
-    background-position: center; 
-    background-repeat: no-repeat; 
-    width: 100%; 
-    height: 100vh; 
+    background-image: url(/src/img/elenco.png); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px;
-    position: relative;  /* Necessário para posicionar o texto dentro da seção */
-}
+    position: relative; /* Necessário para posicionar o texto dentro da seção */
+    }
 
-.texto-novos-projetos {
-    position: absolute;  /* Faz a caixa de texto flutuar sobre a imagem */
-    top: 50%;  /* Centraliza verticalmente na metade da tela */
-    left: 5%;  /* Alinha à esquerda */
-    transform: translateY(-50%);  /* Ajusta a posição vertical para que a caixa fique centralizada */
-    background-color: rgba(255, 255, 255, 0.553);  /* Fundo branco com opacidade */
+    .texto-caixa-elenco {
+    position: absolute; /* Faz a caixa de texto flutuar sobre a imagem */
+    top: 50%; /* Centraliza verticalmente na metade da tela */
+    left: 5%; /* Alinha à esquerda */
+    transform: translateY(-50%); /* Ajusta a posição vertical para que a caixa fique centralizada */
+    background-color: rgba(255, 255, 255, 0.553); /* Fundo branco com opacidade */
     padding: 20px;
     padding-bottom: 10px;
     border-radius: 10px;
-    max-width: 500px;  /* Limita a largura da caixa de texto */
-    color: #333;  /* Cor do texto */
-    font-size: 1.5rem;  /* Tamanho do texto */
+    width: 90%; /* Ajusta a caixa para ocupar 90% da tela */
+    max-width: 90%; /* Garante que a caixa de texto não ultrapasse 90% da largura */
+    color: #333; /* Cor do texto */
+    font-size: 1.5rem; /* Tamanho do texto */
     font-weight: bold;
-}
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px auto; /* Centraliza a caixa e dá um espaço em torno dela */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    }
 
-.form-container {
+    section.novos-projetos {
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url(/src/img/sobre-a-serie.jpg); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative; /* Necessário para posicionar o texto dentro da seção */
+    }
+
+    .texto-novos-projetos {
+    position: absolute; /* Faz a caixa de texto flutuar sobre a imagem */
+    top: 50%; /* Centraliza verticalmente na metade da tela */
+    left: 5%; /* Alinha à esquerda */
+    transform: translateY(-50%); /* Ajusta a posição vertical para que a caixa fique centralizada */
+    background-color: rgba(255, 255, 255, 0.553); /* Fundo branco com opacidade */
+    padding: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    width: 90%; /* Ajusta a caixa para ocupar 90% da tela */
+    max-width: 90%; /* Garante que a caixa de texto não ultrapasse 90% da largura */
+    color: #333; /* Cor do texto */
+    font-size: 1.5rem; /* Tamanho do texto */
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px auto; /* Centraliza a caixa e dá um espaço em torno dela */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    }
+
+    /* Seção de Assinatura de Newsletter */
+    section.newsletter {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #222;
+    color: white;
+    width: 100%;
+    padding: 50px 0;
     text-align: center;
+    }
+
+    .newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    }
+
+    .newsletter p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    }
+
+    .newsletter .form-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    }
+
+    .newsletter .form-container input,
+    .newsletter .form-container button {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    }
+
+    .newsletter .form-container input {
+    width: 300px;
+    }
+
+    .newsletter .form-container button {
+    background-color: $color-button;
+    color: black;
+    cursor: pointer;
+    }
+
+    .newsletter .form-container button:hover {
     background-color: #333;
     color: #fff;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-}
+    }
 
-button[type="submit"] {
-    cursor: pointer;
-}
+    .form-container {
+        background-color: $color-button;
+        border-radius: 20px;
+        text-align: center;
+        color:#333;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: auto;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
 
-footer {
+    .form-container button {
+        background-color: $color-button;
+        color: black;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    /* Configuração do footer */
+    footer {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: $background-color;
+    color: #333;
     text-align: center;
-    font-weight: bold;
-}
+    padding: 30px 0;
+    border-top: 2px solid #ccc;
+    }
+
+    footer p {
+    font-size: 1rem;
+    margin: 10px 0;
+    }
+
+    .footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    }
+
+    .footer-links li {
+    margin: 0;
+    }
+
+    .footer-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    }
+
+    .footer-links a:hover {
+    color: $color-button;
+    text-decoration: underline;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+    section.header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    .list__header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .list__header li {
+        margin: 10px 0;
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .button__header {
+        margin-left: 0;
+        margin-top: 10px;
+        height: 30px;
+        width: 300px;
+        margin-bottom: 70px;
+    }
+
+    .texto-caixa,
+    .texto-caixa-elenco,
+    .texto-novos-projetos {
+        width: 100%; /* Garante que o texto ocupe 100% da largura */
+        margin: 10px auto;
+        margin-right: 40px;
+        padding: 10px; /* Ajusta o padding para melhor exibição */
+        box-sizing: border-box; /* Garante que padding e borda sejam inclusos no cálculo da largura */
+
+    }
+
+    .texto-caixa-elenco {
+        width: 100%; /* Ajusta para ocupar toda a largura disponível */
+        font-size: 1.2rem;
+    }
+
+    .newsletter .form-container input {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .newsletter .form-container button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .list__header {
+        font-size: 14px;
+        display: flex;
+    }
+
+    .texto-caixa,
+    .texto-caixa-elenco,
+    .texto-novos-projetos {
+        width: 80%; /* Ajusta para ocupar toda a largura disponível */
+        margin: 5px auto;
+        font-size: 1.1rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .form-container input,
+    .form-container button {
+        margin: 5px 0;
+        padding: 5px;
+    }
+
+    .form-container {
+        padding: 5px;
+    }
+
+    .texto-caixa-elenco {
+        width: 100%;
+        font-size: 1rem;
+        margin: 5px auto;
+    }
+
+    .newsletter .form-container input {
+        width: 100%;
+    }
+
+    .newsletter .form-container button {
+        width: 100%;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+    }
