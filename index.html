@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/css/main.css">
+    <script src="/dist/js/main.js"></script>
+
+    <title>star-trek</title>
+</head>
+<body>
+    <section class="header">
+        <button id="newsletter-button" class="button__header">Newsletter Startrek</button>
+        <ul class="list__header">
+            <li><a href="#sobre-a-serie">Sobre a série</a></li>
+            <li><a href="#sobre-elenco">Sobre o elenco</a></li>
+            <li><a href="#novos-projetos">Novos Projetos</a></li>
+        </ul>
+    </section>
+    <section id="sobre-a-serie" class="sobre-a-serie">
+        <div class="texto-caixa">
+            <h3>Sobre a série original</h3>
+            <p><h6>Star Trek: The Original Series" (TOS), criada por Gene Roddenberry, estreou em 1966 e se tornou um marco da ficção científica, influenciando gerações de fãs e profissionais.</h6></p>
+            <p><h6>A série se passa no século 23 e segue as aventuras da nave estelar USS Enterprise, comandada pelo Capitão James T. Kirk, junto com sua tripulação diversificada, incluindo o Primeiro Oficial Spock e o Dr. Leonard McCoy. A série abordou temas sociais e políticos relevantes da época, utilizando a ficção científica como uma metáfora para explorar questões como racismo, guerra e direitos humanos.</h6></p>
+            <p><h6>Apesar de ter enfrentado dificuldades de audiência durante sua exibição original, Star Trek ganhou um culto de seguidores e se tornou uma franquia duradoura, gerando várias séries derivadas, filmes, livros e outros produtos. A visão otimista de um futuro onde a humanidade superou suas diferenças e trabalha em conjunto para explorar o espaço continua a inspirar fãs ao redor do mundo.</h6></p>
+        </div>
+    </section>
+    <section id="sobre-elenco" class="sobre-elenco">
+        <div class="texto-caixa-elenco">
+            <h3>Sobre o elenco</h3>
+            <p><h6>O elenco principal de Star Trek foi muito mais do que apenas um grupo de atores. William Shatner, Leonard Nimoy, DeForest Kelley e outros membros do elenco trouxeram vida aos personagens icônicos que se tornaram parte da cultura popular. Suas performances ajudaram a estabelecer a profundidade emocional e a complexidade dos personagens, tornando-os memoráveis para os fãs.</h6></p>
+            <p><h6>Leonard Nimoy, em particular, deixou uma marca indelével com sua interpretação do meio-vulcano Spock. Seu retrato de um personagem dividido entre lógica e emoção ressoou com muitos espectadores e se tornou um símbolo de aceitação e diversidade. A química entre Nimoy, Shatner e Kelley foi um dos pilares do sucesso da série.</h6></p>
+        </div>
+    </section>
+    <section id="novos-projetos" class="novos-projetos">
+        <div class="texto-novos-projetos">
+            <h2>Novos Projetos</h2>
+            <p><h6>Desde o sucesso inicial da série original, Star Trek se expandiu para uma franquia multimídia que inclui várias séries de televisão, filmes, livros, quadrinhos e jogos. Cada nova iteração trouxe sua própria visão e interpretação do universo Star Trek, mantendo a essência da exploração e da aventura.</h6></p>
+            <p><h6>Recentemente, a franquia viu um renascimento com novas séries como "Star Trek: Discovery", "Star Trek: Picard" e "Star Trek: Lower Decks". Essas séries exploram diferentes aspectos do universo Star Trek, desde a exploração espacial tradicional até histórias mais pessoais e introspectivas, atraindo tanto novos fãs quanto os antigos.</h6></p>
+            <p><h6>Além das séries de televisão, novos filmes também foram lançados, trazendo uma nova geração de atores para interpretar os personagens clássicos. Esses filmes, dirigidos por J.J. Abrams e outros, revitalizaram a franquia para o público moderno, combinando ação emocionante com a filosofia e os temas que tornaram Star Trek famoso.</h6></p>
+        </div>
+    </section>
+    <br>
+    <section class="form-container" id="newsletter-form">
+        <h2>Assine a Newsletter Star Trek</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Nome" maxlength="50" required>
+            <input type="email" name="email" placeholder="Email" maxlength="100" required>
+            <input type="tel" name="phone" placeholder="Telefone" pattern="[0-9]{1,15}" required>
+            <button type="submit">Enviar</button>
+            <button type="button" id="back-to-top">Voltar ao topo</button>
+        </form>
+    </section>
+    <br>
+    <footer class="footer">
+        <p>Todos os direitos imaginários reservados à Clone Star Trek &copy; Matrix 2025</p>
+        <ul class="footer-links">
+            <li><a href="#sobre-a-serie">Sobre a série</a></li>
+            <li><a href="#sobre-elenco">Sobre o elenco</a></li>
+            <li><a href="#novos-projetos">Novos Projetos</a></li>
+        </ul>
+    </footer>        
+    <script src="../dist/js/main.js"></script> <!-- Caminho corrigido -->
+    <script>
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
